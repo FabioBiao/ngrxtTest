@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Product } from '../product/product.component';
-import { getStore } from './../store/store.selector';
+// import { getStore } from './../store/store.selector';
 
 @Component({
     selector: 'app-header',

@@ -1,8 +1,9 @@
 import { ActionsUnion, ActionTypes } from './actions';
 import { createSelector, Store, createFeatureSelector } from '@ngrx/store';
+import { Product } from '../product/product.component';
 
 export interface StoreState {
-    items: any[];
+    items: Product[];
     cart: any[];
 }
 

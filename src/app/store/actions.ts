@@ -13,6 +13,7 @@ export enum ActionTypes {
     Remove = '[Product] Remove from cart',
     LoadItems = '[Products] Load items from server',
     LoadSuccess = '[Products] Load success',
+    ShowItems = '[Products] Show Items',
 }
 
 // export const AddToCart = createAction('[Product] Add to cart');
