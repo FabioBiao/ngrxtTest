@@ -7,7 +7,7 @@ export const getStore = createSelector(selectStoreState, state => state);
 
 //getting the items from the store state
 export const selectStoreItems = (state: StoreState) => state.items;
-export const getCartList = createSelector(selectStoreItems, state => state);
+export const getItemList = createSelector(selectStoreItems, state => state);
 
 //getting the cart from the store state
 export const selectStoreCart = (state: StoreState) => state.cart;
