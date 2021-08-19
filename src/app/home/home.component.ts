@@ -7,7 +7,7 @@ import { Product } from '../product/product.component';
 import {
     getStore,
     getCart,
-    getItemsList,
+    selectStoreItems,
     getCartList,
 } from './../store/store.selector';
 import { Observable } from 'rxjs';
@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
     getCartsList: any;
 
     constructor(private store: Store<{ items: Product[]; cart: [] }>) {
-        store.pipe(select(getCart)).subscribe((data) => {
+        store.pipe(select(getCartList)).subscribe((data) => {
             // store.pipe().subscribe((data) => {
             console.log('load finish on component');
             console.log(data);
@@ -35,20 +35,23 @@ export class HomeComponent implements OnInit {
             }
 
             console.log('test');
-            this.getItemsList = store.select(getItemsList);
+            this.getItemsList = store.select(getCartList);
             console.log(this.getItemsList);
-            this.getCartsList = store.select(getCartList);
+            this.getCartsList = store.select(getCart);
             console.log(this.getCartsList);
         });
-
-        //console.log(store.select('shop'));
     }
-
-    // constructor(private store: Store<{ items: Product[]; cart: [] }>) {
-    //   this.count$ = store.pipe(select('count'));
-    // }
 
     ngOnInit(): void {
         this.store.dispatch(new GetItems());
+        console.log('test');
+        this.getItemsList = this.store.select(getCartList).subscribe((data) => {
+            // store.pipe().subscribe((data) => {
+            console.log('load on getItemsList');
+            console.log(data);
+        });
+        console.log(this.getItemsList);
+        this.getCartsList = this.store.select(getCart);
+        console.log(this.getCartsList);
     }
 }

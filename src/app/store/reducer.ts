@@ -24,9 +24,9 @@ export const initialState: StoreState = {
 // );
 
 export function ShopReducer(state = initialState, action: ActionsUnion) {
-    console.log('reducer');
-    console.log(state);
-    console.log(action);
+    // console.log('reducer');
+    // console.log(state);
+    // console.log(action);
     switch (action.type) {
         case ActionTypes.LoadSuccess:
             console.log('reducer load success');
