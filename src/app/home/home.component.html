@@ -13,7 +13,7 @@
             <img src="/assets/images/banner-2.jpeg" alt="A diverse set of fruits" />
         </div>
     </section> -->
-    <section class="product-area" *ngIf="items ">
-        <app-product-list [fruits]="items "></app-product-list>
+    <section class="product-area" *ngIf="items$ ">
+        <app-product-list [fruits]=" items$ "></app-product-list>
     </section>
 </main>

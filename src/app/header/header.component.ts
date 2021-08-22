@@ -11,8 +11,8 @@ import { Product } from '../product/product.component';
 export class HeaderComponent implements OnInit {
     constructor(private store: Store<{ items: []; cart: [] }>) {
         store.pipe().subscribe((data) => {
-            console.log('header');
-            console.log(data);
+            // console.log('header');
+            // console.log(data);
             this.cart = data['shop'].cart;
         });
     }

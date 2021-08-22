@@ -27,3 +27,11 @@ export const getCart = createSelector(selectShopState, (state) => {
   console.log(state);
   return state.cart;
 });
+
+
+
+export const testingGetItems = createSelector(selectShopState, (state) => {
+  console.log("selector Item");
+  console.log(state);
+  return state.cart;
+});

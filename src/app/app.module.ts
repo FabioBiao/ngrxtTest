@@ -28,7 +28,7 @@ import { ShopEffects } from './store/effects';
         // AppRoutingModule,
         // custom imports
         HttpClientModule,
-        StoreModule.forRoot({ shop: ShopReducer }),
+        StoreModule.forRoot({ 'shop': ShopReducer }),
         EffectsModule.forRoot([ShopEffects]),
     ],
     providers: [],
